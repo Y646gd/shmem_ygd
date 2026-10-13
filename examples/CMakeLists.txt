@@ -175,6 +175,8 @@ foreach(EXAMPLE
     add_subdirectory(${EXAMPLE})
 endforeach()
 
+add_subdirectory(topology_query)
+
 if(HAS_ACLRT_MEM_FABRIC_HANDLE)
     add_subdirectory(user_buffer)
 endif()

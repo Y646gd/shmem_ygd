@@ -23,6 +23,7 @@ from . import multi_instance as _multi_instance
 from . import profiling as _profiling
 from . import rma as _rma
 from . import sync as _sync
+from . import topology as _topology
 
 from .config import *
 from .init_final import *
@@ -31,6 +32,7 @@ from .multi_instance import *
 from .profiling import *
 from .rma import *
 from .sync import *
+from .topology import *
 
 # Define public exports
 __all__ = (
@@ -41,4 +43,5 @@ __all__ = (
     + _multi_instance.__all__
     + _config.__all__
     + _profiling.__all__
+    + _topology.__all__
 )
