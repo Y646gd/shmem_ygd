@@ -195,13 +195,6 @@ protected:
         return result;
     }
 
-    static bool BuildSyncEndpointsForTest(
-        UdmaTransportManager& manager, const RootInfo& root_info, const TopoInfo& topo_info, uint32_t rank_count,
-        std::vector<std::vector<SyncEndpoint>>& endpoints)
-    {
-        return manager.BuildSyncEndpoints(root_info, topo_info, rank_count, endpoints);
-    }
-
     aclshmemi_bootstrap_handle_t saved_handle_{};
     HcommMemRegFunc saved_mem_reg_{nullptr};
     HcommMemUnregFunc saved_mem_unreg_{nullptr};
@@ -245,13 +238,10 @@ TEST_F(UdmaEndpointExchangeTest, KeepsExplicitClosFabricWhenPortsAlsoMatchMeshTo
     topo_info.meshTopoEdges.push_back({0, 1, {"shared-port"}, {"peer-mesh-port"}});
     topo_info.closTopoEdges.push_back({1, 0, 0, {"shared-port"}});
 
-    UdmaTransportManager manager;
-    std::vector<std::vector<SyncEndpoint>> endpoints;
-    ASSERT_TRUE(BuildSyncEndpointsForTest(manager, root_info, topo_info, 1, endpoints));
+    const auto endpoints = TopologyContext::BuildLocalEndpoints(root_info, topo_info);
     ASSERT_EQ(endpoints.size(), 1U);
-    ASSERT_EQ(endpoints[0].size(), 1U);
-    EXPECT_EQ(endpoints[0][0].netType, NetType::Clos);
-    EXPECT_EQ(endpoints[0][0].fabric, TopoFabric::Clos);
+    EXPECT_EQ(endpoints[0].netType, NetType::Clos);
+    EXPECT_EQ(endpoints[0].fabric, TopoFabric::Clos);
 }
 
 TEST_F(UdmaEndpointExchangeTest, RejectsEmptyAndOverflowingDimensions)

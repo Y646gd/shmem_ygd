@@ -18,9 +18,7 @@
 #include <vector>
 #include <cstdint>
 
-#if defined(ACLSHMEM_MSSANITIZER_BUILD)
 #include <memory>
-#endif
 
 #include "transport_manager.h"
 #include "transport/topo/topo_reader.h"
@@ -122,7 +120,7 @@ private:
         std::vector<QpRoute> qp_routes{};
     };
     bool CreateEndpoint(uint32_t eid_index, uint32_t peer_rank, const std::array<uint8_t, 16>& target_eid_raw);
-    Result PrepareOpenDevice(uint32_t device_id, uint32_t rank_count);
+    Result PrepareOpenDevice(uint32_t rank_count);
     // Allgather the local HCOMM endpoint descriptors into `exchange`.
     Result ExchangeEndpointDescriptors(EndpointExchange& exchange) const;
     // Locate dst_pe's exchanged endpoint descriptor on remote_eid_index, or nullptr if absent.
@@ -157,13 +155,6 @@ private:
         const std::vector<uint32_t>& channel_dst_pes, const std::vector<uint32_t>& channel_qp_indices,
         std::vector<SqContext>& sq_contexts_by_qp, std::vector<CqContext>& cq_contexts_by_qp,
         std::vector<RegedBufferEntity>& remote_buffers_by_qp, std::vector<bool>& qp_valid) const;
-    // Builds this rank's SyncEndpoint list (one entry per rank_addr across all levels,
-    // including netLayer 0) from rootInfo, then allgathers it across all ranks via a
-    // MessagePack blob so the TopoQuerier can resolve both the local and remote eidIndex
-    // (with Clos plane alignment) for every peer. Output index is rankId.
-    bool BuildSyncEndpoints(
-        const RootInfo& root_info, const TopoInfo& topo_info, uint32_t rank_count,
-        std::vector<std::vector<SyncEndpoint>>& out);
     Result PrepareUdmaInfoBuffers(std::vector<uint8_t>& eid_table_host);
     Result InitHostUdmaInfo(std::vector<uint8_t>& udma_info_buffer, aclshmemi_aiv_udma_info_t*& copy_info);
     Result FillHostUdmaInfo(
@@ -201,7 +192,8 @@ private:
     uint32_t qp_num_{1};
     std::map<uint32_t, uint32_t> net_layer_policy_{};
     bool multi_link_enabled_{false};
-    uint32_t user_id_{0};
+    std::unique_ptr<TopologyContext> owned_topology_context_;
+    const TopologyContext* topology_context_{nullptr};
     uint32_t phy_id_{0};
     hybm_role_type role_{hybm_role_type::HYBM_ROLE_PEER};
     // peerRankId -> route state. default_route is the first resolved route and is used by
