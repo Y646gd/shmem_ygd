@@ -26,6 +26,8 @@
 #include "host/shmem_host_def.h"
 #include "sotre_net.h"
 
+struct aclshmemi_bootstrap_handle;
+
 namespace shm {
 namespace transport {
 
@@ -157,6 +159,23 @@ inline void from_json(const nlohmann::json& json, SyncEndpoint& endpoint)
     json.at("eidIndex").get_to(endpoint.eidIndex);
 }
 
+// Immutable discovery shared by instance queries and UDMA route selection.
+struct TopologyContext {
+    uint32_t physical_device_id{0};
+    uint32_t max_eid_slot_count{0};
+    uint32_t my_pe{0};
+    RootInfo root_info;
+    TopoInfo topo_info;
+    std::vector<uint32_t> rank_to_local_id;
+    std::vector<std::vector<SyncEndpoint>> rank_to_sync_endpoints;
+
+    int Initialize(int32_t user_device_id, uint32_t rank, uint32_t npes,
+                   aclshmemi_bootstrap_handle* bootstrap);
+    static std::vector<SyncEndpoint> BuildLocalEndpoints(const RootInfo& root, const TopoInfo& topo);
+    // No heap allocation: even an allocation failure must agree before the next exchange.
+    static int Agree(int status, uint32_t npes, aclshmemi_bootstrap_handle* bootstrap);
+};
+
 struct EidRoute {
     uint32_t localEidIndex{};
     EidData localEidRaw{};
@@ -180,8 +199,24 @@ private:
 
 class TopoReader {
 public:
+#ifdef ACLSHMEM_TOPOLOGY_JSON_STUB_ROOTINFO
+    // TEMP_TOPOLOGY_CPP_JSON_STUB: compile-time file override for portable C++ tests.
+    static constexpr const char* ROOTINFO_PATH = ACLSHMEM_TOPOLOGY_JSON_STUB_ROOTINFO;
+#else
     static constexpr const char* ROOTINFO_PATH = "/etc/hccl_rootinfo.json";
+#endif
     static bool ParseRootInfo(uint32_t phyId, RootInfo& out);
+#if defined(ACLSHMEM_UNIT_TEST) && defined(ACLSHMEM_SOC_950)
+    // TEMP_TOPOLOGY_JSON_STUB: bypass device/file discovery, retain production parsing.
+    static bool ParseRootInfoJsonForTest(const nlohmann::json& input, uint32_t phyId, RootInfo& out)
+    {
+        out = RootInfo{};
+        if (ParseRootInfoJson(input, phyId, out)) return true;
+        out = RootInfo{};
+        return false;
+    }
+#endif
+
     static bool ParseTopoInfo(const std::string& path, TopoInfo& out);
     static bool GetLocalId(const RootInfo& root, uint32_t deviceId, uint32_t& localId);
 
@@ -213,6 +248,9 @@ public:
           netLayerPolicy_(netLayerPolicy),
           multiLinkEnabled_(multiLinkEnabled)
     {}
+
+    // Physical inventory, independent of route selection, QP count and engine enablement.
+    void GetReachableNetLayers(uint32_t targetRank, std::vector<uint32_t>& layers) const;
 
     Result GetEidRoutes(uint32_t targetRank, uint32_t routeCount, std::vector<EidRoute>& routes);
     bool GetEidRoute(uint32_t targetRank, uint32_t& localEidIndex, EidData& localEidRaw, uint32_t& remoteEidIndex);

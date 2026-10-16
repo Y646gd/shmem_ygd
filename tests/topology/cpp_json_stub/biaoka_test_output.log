@@ -1,0 +1,69 @@
+dmin@MacBook-Pro shmem-rfc % python3 -B tests/topology/cpp_json_stub/run.py
+Compiling production C++ parser/context/query/build with ASan+UBSan...
+[DEVICE] PE 0 -> device_id 0
+[DEVICE] PE 1 -> device_id 1
+[DEVICE] PE 2 -> device_id 2
+[DEVICE] PE 3 -> device_id 3
+[DEVICE] PE 4 -> device_id 4
+[DEVICE] PE 5 -> device_id 5
+[DEVICE] PE 6 -> device_id 6
+[DEVICE] PE 7 -> device_id 7
+[DEVICE] PE 8 -> device_id 8
+[DEVICE] PE 9 -> device_id 9
+[DEVICE] PE 10 -> device_id 10
+[DEVICE] PE 11 -> device_id 11
+[DEVICE] PE 12 -> device_id 12
+[DEVICE] PE 13 -> device_id 13
+[DEVICE] PE 14 -> device_id 14
+[DEVICE] PE 15 -> device_id 15
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":0,"target_pe":0}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":0,"target_pe":0}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":0,"target_pe":0}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":1,"target_pe":1}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":1,"target_pe":1}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":1,"target_pe":1}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":2,"target_pe":2}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":2,"target_pe":2}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":2,"target_pe":2}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":3,"target_pe":3}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":3,"target_pe":3}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":2,"net_layers":[0,3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":3,"target_pe":3}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":4,"target_pe":4}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":4,"target_pe":4}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":4,"target_pe":4}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":5,"target_pe":5}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":5,"target_pe":5}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":5,"target_pe":5}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":6,"target_pe":6}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":6,"target_pe":6}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":6,"target_pe":6}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":7,"target_pe":7}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":7,"target_pe":7}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":7,"target_pe":7}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":8,"target_pe":8}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":8,"target_pe":8}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":8,"target_pe":8}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":9,"target_pe":9}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":9,"target_pe":9}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":9,"target_pe":9}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":10,"target_pe":10}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":10,"target_pe":10}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":10,"target_pe":10}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":11,"target_pe":11}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":11,"target_pe":11}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":11,"target_pe":11}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":12,"target_pe":12}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":12,"target_pe":12}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":12,"target_pe":12}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":13,"target_pe":13}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":13,"target_pe":13}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":13,"target_pe":13}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":14,"target_pe":14}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":14,"target_pe":14}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":14,"target_pe":14}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":0,"net_layers":[],"query_mask":1,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":15,"target_pe":15}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":0,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":2,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":15,"target_pe":15}
+{"case":"root_info-biaoka","engine_expectation_checked":false,"engine_mask":1,"links_expectation_checked":false,"mode":"production_cpp","net_layer_count":1,"net_layers":[3],"query_mask":3,"source_device_id":0,"source_pe":0,"status":0,"target_device_id":15,"target_pe":15}
+[CHECK] root_info-biaoka: engines expected=0, links expected=0 (0 = observation only)
+PASS: 1 C++ JSON cases (real public query, ASan+UBSan)
+Admin@MacBook-Pro shmem-rfc % 

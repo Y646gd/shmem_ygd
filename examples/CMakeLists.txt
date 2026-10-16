@@ -175,6 +175,10 @@ foreach(EXAMPLE
     add_subdirectory(${EXAMPLE})
 endforeach()
 
+add_subdirectory(topology_query)
+add_subdirectory(topology_query_mte_sdma)
+add_subdirectory(topology_query_mte_sdma_roce)
+
 if(HAS_ACLRT_MEM_FABRIC_HANDLE)
     add_subdirectory(user_buffer)
 endif()

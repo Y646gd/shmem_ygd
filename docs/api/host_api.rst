@@ -4,6 +4,9 @@ HOST API
 shmem_host_init.h
 ---------------------------------
 
+包含 ``aclshmemx_query_topology``：查询当前实例本 PE 到目标 PE 的引擎和网络层关系。
+
+
 .. doxygenfile:: shmem_host_init.h
     :project: ACLSHMEM_CPP_API
 

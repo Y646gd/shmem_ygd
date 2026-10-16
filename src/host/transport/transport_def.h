@@ -57,6 +57,8 @@ struct SdmaQpConfig {
     uint32_t qpNum{1};
 };
 
+struct TopologyContext;
+
 struct TransportOptions {
     uint32_t rankId;
     uint32_t rankCount;
@@ -70,6 +72,9 @@ struct TransportOptions {
     UdmaQpConfig udmaQpConfig{};
     // SDMA uses one device-only stream per configured QP; 1 by default.
     uint32_t sdmaQpNum{1};
+    // Borrowed until the consuming manager is destroyed; SHMEM owns it per instance.
+    const TopologyContext* topologyContext{nullptr};
+
 
     friend std::ostream& operator<<(std::ostream& output, const TransportOptions& options)
     {

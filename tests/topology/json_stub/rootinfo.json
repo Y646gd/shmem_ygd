@@ -1,0 +1,209 @@
+{
+  "topo_file_path": "topo.json",
+  "rank_list": [
+    {
+      "device_id": 10,
+      "local_id": 0,
+      "level_list": [
+        {
+          "net_type": "MESH",
+          "net_layer": 0,
+          "net_instance_id": "server-A",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.0.0.1",
+              "plane_id": "mesh",
+              "ports": [
+                "m0"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 1,
+          "net_instance_id": "pod",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.1.0.1",
+              "plane_id": "left",
+              "ports": [
+                "c0"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 3,
+          "net_instance_id": "roce",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.3.0.1",
+              "plane_id": "roce",
+              "ports": [
+                "r0"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device_id": 11,
+      "local_id": 1,
+      "level_list": [
+        {
+          "net_type": "MESH",
+          "net_layer": 0,
+          "net_instance_id": "server-A",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.0.0.2",
+              "plane_id": "mesh",
+              "ports": [
+                "m1"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 1,
+          "net_instance_id": "pod",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.1.0.2",
+              "plane_id": "left",
+              "ports": [
+                "c1"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 3,
+          "net_instance_id": "roce",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.3.0.2",
+              "plane_id": "roce",
+              "ports": [
+                "r1"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device_id": 12,
+      "local_id": 2,
+      "level_list": [
+        {
+          "net_type": "MESH",
+          "net_layer": 0,
+          "net_instance_id": "server-B",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.0.0.3",
+              "plane_id": "mesh",
+              "ports": [
+                "m2"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 1,
+          "net_instance_id": "pod",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.1.0.3",
+              "plane_id": "left",
+              "ports": [
+                "c2"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 3,
+          "net_instance_id": "isolated",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.3.0.3",
+              "plane_id": "roce",
+              "ports": [
+                "r2"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "device_id": 13,
+      "local_id": 3,
+      "level_list": [
+        {
+          "net_type": "MESH",
+          "net_layer": 0,
+          "net_instance_id": "server-B",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.0.0.4",
+              "plane_id": "mesh",
+              "ports": [
+                "m3"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 1,
+          "net_instance_id": "pod",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.1.0.4",
+              "plane_id": "isolated",
+              "ports": [
+                "c3"
+              ]
+            }
+          ]
+        },
+        {
+          "net_type": "CLOS",
+          "net_layer": 3,
+          "net_instance_id": "roce",
+          "rank_addr_list": [
+            {
+              "addr_type": "IPV4",
+              "addr": "10.3.0.4",
+              "plane_id": "roce",
+              "ports": [
+                "r3"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

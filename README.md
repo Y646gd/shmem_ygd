@@ -81,6 +81,8 @@ source install/set_env.sh
 
 若您需要了解文档和接口中出现的缩写与名词，请参考[术语表](docs/glossary.md)。
 
+初始化后的 PE 引擎与网络层查询见 [拓扑查询 API](docs/api/topology.md)，使用示例见 [topology_query](examples/topology_query/README.md)。
+
 ## 一、项目简介
 
 SHMEM 是面向昇腾平台的多机多卡内存通信库，通过封装 Host 侧与 Device 侧接口，实现跨设备的高效内存访问与数据同步。其核心价值在于：

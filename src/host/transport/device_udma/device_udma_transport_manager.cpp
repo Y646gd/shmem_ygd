@@ -67,64 +67,6 @@ bool CheckedAdd(T lhs, T rhs, T& result)
     return true;
 }
 
-bool PortInMeshTopo(const TopoInfo& topoInfo, const EidPort& port)
-{
-    for (const auto& edge : topoInfo.meshTopoEdges) {
-        if (std::find(edge.localAPorts.begin(), edge.localAPorts.end(), port) != edge.localAPorts.end() ||
-            std::find(edge.localBPorts.begin(), edge.localBPorts.end(), port) != edge.localBPorts.end()) {
-            return true;
-        }
-    }
-    return false;
-}
-
-bool PortInClosTopo(const TopoInfo& topoInfo, const EidPort& port)
-{
-    for (const auto& edge : topoInfo.closTopoEdges) {
-        if (std::find(edge.ports.begin(), edge.ports.end(), port) != edge.ports.end()) {
-            return true;
-        }
-    }
-    return false;
-}
-
-TopoFabric ClassifyEndpointFabric(const TopoInfo& topoInfo, const std::vector<EidPort>& ports)
-{
-    bool meshMatched = false;
-    bool closMatched = false;
-    for (const auto& port : ports) {
-        meshMatched = meshMatched || PortInMeshTopo(topoInfo, port);
-        closMatched = closMatched || PortInClosTopo(topoInfo, port);
-        if (meshMatched && closMatched) {
-            return TopoFabric::Unknown;
-        }
-    }
-    if (closMatched) {
-        return TopoFabric::Clos;
-    }
-    if (meshMatched) {
-        return TopoFabric::Mesh;
-    }
-    return TopoFabric::Unknown;
-}
-
-TopoFabric ResolveEndpointFabric(NetType netType, const TopoInfo& topoInfo, const std::vector<EidPort>& ports)
-{
-    // An explicit rootinfo network type is authoritative. In particular, an
-    // aggregated PoD CLOS address can contain ports which also appear in a
-    // Mesh topology edge; inferring its fabric from the complete port set
-    // would incorrectly turn that explicit CLOS endpoint into Unknown.
-    if (netType == NetType::Mesh) {
-        return TopoFabric::Mesh;
-    }
-    if (netType == NetType::Clos) {
-        return TopoFabric::Clos;
-    }
-    // TOPO_FILE_DESC intentionally relies on the driver topology to identify
-    // the fabric because its rootinfo level describes a merged topology.
-    return ClassifyEndpointFabric(topoInfo, ports);
-}
-
 std::string MakeUdmaChannelName(uint32_t local_rank, uint32_t peer, uint32_t qp_idx)
 {
     const uint32_t low_rank = std::min(local_rank, peer);
@@ -355,21 +297,34 @@ Result UdmaTransportManager::OpenDevice(const TransportOptions& options)
         }
     }
 
-    int32_t user_id = -1;
-    int32_t logic_id = -1;
-
-    auto ret = DlAclApi::AclrtGetDevice(&user_id);
-    SHM_ASSERT_LOG_AND_RETURN(
-        ret == 0 && user_id >= 0, "AclrtGetDevice() return=" << ret << ", output device_id=" << user_id,
-        ACLSHMEM_DL_FUNC_FAILED);
-
-    ret = DlAclApi::RtGetLogicDevIdByUserDevId(user_id, &logic_id);
-    SHM_ASSERT_LOG_AND_RETURN(
-        ret == 0 && logic_id >= 0, "RtGetLogicDevIdByUserDevId() return=" << ret << ", output device_id=" << logic_id,
-        ACLSHMEM_DL_FUNC_FAILED);
-
-    const uint32_t device_id = static_cast<uint32_t>(logic_id);
-    user_id_ = static_cast<uint32_t>(user_id);
+    topology_context_ = options.topologyContext;
+    if (topology_context_ == nullptr) {
+        int status = ACLSHMEM_SUCCESS;
+        try {
+            owned_topology_context_ = std::make_unique<TopologyContext>();
+        } catch (const std::bad_alloc&) {
+            status = ACLSHMEM_MALLOC_FAILED;
+        }
+        status = TopologyContext::Agree(status, options.rankCount, &g_boot_handle);
+        if (status != ACLSHMEM_SUCCESS) {
+            return status;
+        }
+        int32_t user_id = -1;
+        status = DlAclApi::AclrtGetDevice(&user_id) == 0 ? ACLSHMEM_SUCCESS : ACLSHMEM_DL_FUNC_FAILED;
+        status = TopologyContext::Agree(status, options.rankCount, &g_boot_handle);
+        if (status != ACLSHMEM_SUCCESS) {
+            return status;
+        }
+        status = owned_topology_context_->Initialize(user_id, options.rankId, options.rankCount, &g_boot_handle);
+        if (status != ACLSHMEM_SUCCESS) {
+            return status;
+        }
+        topology_context_ = owned_topology_context_.get();
+    }
+    if (topology_context_->my_pe != options.rankId ||
+        topology_context_->rank_to_local_id.size() != options.rankCount) {
+        return ACLSHMEM_INVALID_VALUE;
+    }
     rank_id_ = options.rankId;
     rank_count_ = options.rankCount;
     role_ = options.role;
@@ -378,7 +333,7 @@ Result UdmaTransportManager::OpenDevice(const TransportOptions& options)
     multi_link_enabled_ = options.udmaQpConfig.multiLinkEnabled;
     peer_routes_.clear();
     all_local_routes_.clear();
-    const Result prepare_result = PrepareOpenDevice(device_id, rank_count_);
+    const Result prepare_result = PrepareOpenDevice(rank_count_);
     if (prepare_result != ACLSHMEM_SUCCESS) {
         SHM_LOG_ERROR("PrepareOpenDevice failed, result = " << prepare_result);
         return prepare_result;
@@ -1501,124 +1456,19 @@ Result UdmaTransportManager::AsyncConnect()
     return ACLSHMEM_SUCCESS;
 }
 
-bool UdmaTransportManager::BuildSyncEndpoints(
-    const RootInfo& root_info, const TopoInfo& topo_info, uint32_t rank_count,
-    std::vector<std::vector<SyncEndpoint>>& out)
+Result UdmaTransportManager::PrepareOpenDevice(uint32_t rank_count)
 {
-    std::vector<SyncEndpoint> local_endpoints;
-    for (const auto& item : root_info.eidIndexToRankAddr) {
-        const auto& rank_addr = item.second;
-        if (rank_addr == nullptr || rank_addr->levelInfo == nullptr) {
-            continue;
-        }
-        SyncEndpoint endpoint;
-        endpoint.netLayer = rank_addr->levelInfo->netLayer;
-        endpoint.netInstanceId = rank_addr->levelInfo->netInstanceId;
-        endpoint.netType = rank_addr->levelInfo->netType;
-        endpoint.fabric = ResolveEndpointFabric(endpoint.netType, topo_info, rank_addr->ports);
-        endpoint.addrType = rank_addr->addrType;
-        endpoint.planeId = rank_addr->planeId;
-        endpoint.ports = rank_addr->ports;
-        endpoint.eidIndex = item.first;
-        local_endpoints.push_back(std::move(endpoint));
+    if (topology_context_ == nullptr) {
+        return ACLSHMEM_NOT_INITED;
     }
-
-    const std::vector<uint8_t> local_blob = nlohmann::json::to_msgpack(nlohmann::json(local_endpoints));
-
-    uint32_t local_len = static_cast<uint32_t>(local_blob.size());
-    std::vector<uint32_t> all_len(rank_count, 0);
-    g_boot_handle.allgather(&local_len, all_len.data(), sizeof(uint32_t), &g_boot_handle);
-
-    uint32_t max_len = 0;
-    for (const uint32_t len : all_len) {
-        max_len = std::max(max_len, len);
-    }
-    if (max_len == 0) {
-        SHM_LOG_ERROR("No sync endpoints found on any rank.");
-        return false;
-    }
-
-    std::vector<uint8_t> send_buf(max_len, 0);
-    std::copy(local_blob.begin(), local_blob.end(), send_buf.begin());
-
-    std::vector<uint8_t> recv_buf(static_cast<size_t>(max_len) * rank_count, 0);
-    g_boot_handle.allgather(send_buf.data(), recv_buf.data(), static_cast<int>(max_len), &g_boot_handle);
-
-    out.assign(rank_count, std::vector<SyncEndpoint>{});
-    for (uint32_t rank = 0; rank < rank_count; ++rank) {
-        const uint32_t len = all_len[rank];
-        if (len == 0) {
-            continue;
-        }
-        const uint8_t* begin = recv_buf.data() + static_cast<size_t>(rank) * max_len;
-        try {
-            out[rank] = nlohmann::json::from_msgpack(begin, begin + len).get<std::vector<SyncEndpoint>>();
-        } catch (const std::exception& ex) {
-            SHM_LOG_ERROR("Failed to decode sync endpoints for rank " << rank << ": " << ex.what());
-            return false;
-        }
-    }
-    return true;
-}
-
-Result UdmaTransportManager::PrepareOpenDevice(uint32_t device_id, uint32_t rank_count)
-{
-    RootInfo root_info;
-    TopoInfo topo_info;
-    uint32_t local_id = 0;
-    uint32_t eid_count = 0;
-    int32_t phy_id = -1;
-
-    auto ret = DlAclApi::AclrtGetPhyDevIdByLogicDevId(static_cast<int32_t>(user_id_), &phy_id);
-    SHM_ASSERT_LOG_AND_RETURN(
-        ret == 0 && phy_id >= 0,
-        "AclrtGetPhyDevIdByLogicDevId() return=" << ret << ", user_id=" << user_id_ << ", logic_device_id=" << device_id
-                                                 << ", output phy_id=" << phy_id,
-        ACLSHMEM_DL_FUNC_FAILED);
-
-    if (!TopoReader::ParseRootInfo(phy_id, root_info)) {
-        SHM_LOG_ERROR("Failed to parse the rootinfo file.");
-        return ACLSHMEM_INNER_ERROR;
-    }
-    phy_id_ = static_cast<uint32_t>(phy_id);
-    SHM_LOG_INFO(
-        "Resolved phy id from current device mapping, user_id=" << user_id_ << ", logic_device_id=" << device_id
-                                                                << ", phy_id=" << phy_id_);
-    if (!TopoReader::ParseTopoInfo(root_info.topoFilePath, topo_info)) {
-        SHM_LOG_ERROR("Failed to parse the topology file at path " << root_info.topoFilePath);
-        return ACLSHMEM_INNER_ERROR;
-    }
-
-    if (!TopoReader::GetLocalId(root_info, phy_id_, local_id)) {
-        SHM_LOG_ERROR("Failed to find local_id for phy_id: " << phy_id_);
-        return ACLSHMEM_INNER_ERROR;
-    }
-    if (!TopoReader::GetEidCount(root_info, eid_count)) {
-        SHM_LOG_ERROR("Failed to find eid count from rootinfo.");
-        return ACLSHMEM_INNER_ERROR;
-    }
-
-    std::vector<uint32_t> eid_count_list(rank_count);
-    g_boot_handle.allgather(&eid_count, eid_count_list.data(), sizeof(uint32_t), &g_boot_handle);
-    const auto max_eid_count_it = std::max_element(eid_count_list.begin(), eid_count_list.end());
-    const uint32_t max_eid_count = (max_eid_count_it == eid_count_list.end()) ? 0 : *max_eid_count_it;
-    if (max_eid_count == 0) {
-        SHM_LOG_ERROR("Invalid eidSlotCount resolved from rootinfo rank_addr_list.");
-        return ACLSHMEM_INNER_ERROR;
-    }
-
-    std::vector<uint32_t> local_id_list(rank_count);
-    g_boot_handle.allgather(&local_id, local_id_list.data(), sizeof(uint32_t), &g_boot_handle);
-
-    std::vector<std::vector<SyncEndpoint>> rank_idx_to_sync_endpoint;
-    if (!BuildSyncEndpoints(root_info, topo_info, rank_count, rank_idx_to_sync_endpoint)) {
-        SHM_LOG_ERROR("Failed to gather sync endpoints across ranks.");
-        return ACLSHMEM_INNER_ERROR;
-    }
-
+    const auto& context = *topology_context_;
+    phy_id_ = context.physical_device_id;
+    const auto& local_id_list = context.rank_to_local_id;
+    const uint32_t local_id = local_id_list[rank_id_];
+    const uint32_t max_eid_count = context.max_eid_slot_count;
     TopoQuerier topo_querier(
-        root_info, topo_info, rank_id_, local_id_list, rank_idx_to_sync_endpoint, net_layer_policy_,
-        multi_link_enabled_);
+        context.root_info, context.topo_info, rank_id_, local_id_list,
+        context.rank_to_sync_endpoints, net_layer_policy_, multi_link_enabled_);
 
     // Local outbound EID index toward each peer, later allgathered into the full N x N routing
     // matrix the relay path consumes. INVALID_EID_INDEX marks self / unroutable slots.
@@ -1990,6 +1840,8 @@ void UdmaTransportManager::CleanupResources()
     endpoint_local_desc_map_.clear();
     endpoint_listen_port_map_.clear();
     channel_handles_.clear();
+    topology_context_ = nullptr;
+    owned_topology_context_.reset();
     connected_ = false;
 }
 

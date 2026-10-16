@@ -15,7 +15,7 @@
 #include <mutex>
 #include <vector>
 
-#include "host/shmem_host_def.h"
+#include "host/init/shmem_host_init.h"
 #include "host_device/shmem_common_types.h"
 
 #include "mem/shmemi_mgr.h"
@@ -30,10 +30,17 @@
 namespace shm {
 namespace transport {
 struct UdmaQpConfig;
+struct TopologyContext;
 } // namespace transport
 } // namespace shm
 
 typedef struct entity_member {
+    entity_member();
+    ~entity_member();
+#ifdef ACLSHMEM_SOC_950
+    std::unique_ptr<shm::transport::TopologyContext> topology_context;
+    std::vector<std::vector<aclshmemx_net_layer_t>> topology_net_layers_by_pe;
+#endif
     void* hbm_gva = nullptr;
     void* dram_gva = nullptr;
 
@@ -79,6 +86,14 @@ public:
         const shm::transport::UdmaQpConfig& udma_qp_config, uint32_t rdma_qp_num, uint32_t sdma_qp_num);
     void* get_buffer_ptr(const void* local_ptr);
     int release_aclshmem_entity(uint64_t instance_id);
+    int build_topology_state(uint64_t instance_id);
+#if defined(ACLSHMEM_UNIT_TEST) && defined(ACLSHMEM_SOC_950)
+    // TEMP_TOPOLOGY_JSON_STUB: inject discovery only; build/query remain production code.
+    int install_topology_context_for_test(
+        uint64_t instance_id, std::unique_ptr<shm::transport::TopologyContext> context);
+#endif
+
+    int query_topology(uint64_t instance_id, int pe, uint32_t query_mask, aclshmemx_topology_t* out);
     int get_qp_net_layer(
         uint64_t instance_id, data_op_engine_type_t engine, uint32_t peer, uint32_t qp_idx, uint32_t& net_layer);
 
