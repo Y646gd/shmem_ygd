@@ -143,9 +143,49 @@ typedef enum : uint32_t {
     ACLSHMEM_NET_LAYER_0 = 0U,                /**< Supported by aclshmemx_set_qp_net_layer; typically direct MESH. */
     ACLSHMEM_NET_LAYER_1 = 1U,                /**< Supported by aclshmemx_set_qp_net_layer; typically switched CLOS. */
     ACLSHMEM_NET_LAYER_2 = 2U,                /**< Reserved; not supported by aclshmemx_set_qp_net_layer. */
-    ACLSHMEM_NET_LAYER_3 = 3U,                /**< Reserved; not supported by aclshmemx_set_qp_net_layer. */
+    ACLSHMEM_NET_LAYER_3 = 3U,                /**< RoCE topology layer; not supported by aclshmemx_set_qp_net_layer. */
     ACLSHMEM_NET_LAYER_DEFAULT = 0xFFFFFFFFU, /**< Clear the explicit policy and restore default route selection. */
 } aclshmemx_net_layer_t;
+
+#define ACLSHMEMX_TOPOLOGY_ABI_VERSION 1U
+#define ACLSHMEMX_TOPOLOGY_QUERY_ENGINES 0x1U
+#define ACLSHMEMX_TOPOLOGY_QUERY_LINKS 0x2U
+
+/** Host topology result. Initialize with ACLSHMEMX_TOPOLOGY_INITIALIZER. */
+typedef struct aclshmemx_topology_t {
+    uint32_t struct_size;
+    uint32_t abi_version;
+    uint32_t engine_mask;
+    uint32_t net_layer_count;
+    const aclshmemx_net_layer_t* net_layers;
+    uint64_t reserved[5];
+} aclshmemx_topology_t;
+
+#define ACLSHMEMX_TOPOLOGY_INITIALIZER \
+    {sizeof(aclshmemx_topology_t), ACLSHMEMX_TOPOLOGY_ABI_VERSION, 0U, 0U, nullptr, {0U}}
+
+/**
+ * @brief Locally query the current instance's connectivity to a world PE.
+ * @param pe Target PE in [0, npes). The source is the current instance's my_pe.
+ * @param query_mask Nonzero OR of QUERY_ENGINES and QUERY_LINKS.
+ * @param topology Caller-owned result initialized with ACLSHMEMX_TOPOLOGY_INITIALIZER.
+ * @note ENGINES returns data_op_engine_type_t bits from initialized reachability.
+ *       Ascend950 SDMA enables CMO only and is excluded from PE-to-PE D2D engines.
+ *       UDMA requires a non-self directly reachable peer and an actual QP0 route.
+ *       LINKS is supported on Ascend950 only: sorted, unique layers 0/1/3, empty for self.
+ *       It describes the initialization-time physical topology, independent of engine
+ *       enablement, QP count/policy and live port health; it does not promise usable QPs.
+ *       net_layers is borrowed, read-only instance storage, valid until that instance's
+ *       finalize begins. Serialize finalize with use/copy of this array. Selecting another
+ *       instance does not transfer ownership. Query is noncollective and O(1).
+ *       The v1 Host layout is 64 bytes, aligned to 8. Only engine_mask, net_layer_count
+ *       and net_layers are written; input header, reserved slots and any tail are preserved.
+ * @return SUCCESS; INVALID_PARAM for null output; INVALID_VALUE for invalid mask, PE,
+ *         ABI version or size; NOT_INITED before init; NOT_SUPPORTED for A2/A3 LINKS.
+ *         On error consume only the status.
+ */
+ACLSHMEM_HOST_API int aclshmemx_query_topology(int pe, uint32_t query_mask, aclshmemx_topology_t* topology);
+
 
 /**
  * @brief Configure the process-wide topology netLayer policy for one QP.

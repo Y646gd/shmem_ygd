@@ -1,0 +1,318 @@
+[
+  {
+    "section": "1.1",
+    "requirement": "公开结构体、固定64字节ABI、initializer全部预留字段",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1AbiInitializerAndEveryFieldOffset"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "1.2",
+    "requirement": "引擎/物理层分离、ROCE与SDMA位转换",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyQueryTest.ConvertsEveryInternalBitAndPreservesCallerLayout",
+      "TopologyEngineMatrix.ConfigurationReachabilityRouteSelfAndQueryMasks"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "1.3-params",
+    "requirement": "参数、所有未定义位、长度、版本、缺失激活状态",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1AllInvalidBitsSizesVersionsAndMissingActiveState"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "1.3-ownership",
+    "requirement": "查询输出字段、全部reserved及扩展尾部保持、未请求项清零",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1AllMasksPreserveAllReservedAndExtendedTail"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "1.3-lifecycle",
+    "requirement": "缓存稳定、切换实例及释放前复制",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "RfcContractTest.Rfc4SnapshotIsStableUntilFixtureOwnerRelease",
+      "RfcContractTest.Rfc4ActiveInstanceSwitchAndRepeatedFixtureCreation"
+    ],
+    "limitation": "只测试实例fixture绑定/释放及指针借用，不等同真实init/finalize或C++并发释放。"
+  },
+  {
+    "section": "1.4",
+    "requirement": "Python参数/查询位/异常/实例锁、返回对象",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "test_python_topology.py",
+      "test_public_include_export_and_python_native_copy_are_wired"
+    ],
+    "limitation": "高层包装动态执行；native绑定仅源码检查。缺少可用pybind11/CANN集成环境，未实际编译链接native模块。"
+  },
+  {
+    "section": "2.1-2.2",
+    "requirement": "公开查询示例所需的引擎、物理层与平台规则",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyQueryTest.A2A3RejectsLinksEvenWhenEnginesIsAlsoRequested",
+      "TopologyEngineMatrix.ConfigurationReachabilityRouteSelfAndQueryMasks"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "2.3-plan",
+    "requirement": "双层前提、实际QP验证、错误传播及Host/kernel切分一致",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "RfcPlannerTest",
+      "RfcSlicesTest"
+    ],
+    "limitation": "执行当前固定QP0/1示例，不是RFC通用任意QP规划器；奇数余量沿1019规则给前段。实际传输/trace未运行。"
+  },
+  {
+    "section": "3.1",
+    "requirement": "当前实例/源PE与world目标、查询无collective",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1CurrentInstanceWorldPeAndQueryPerformsNoCollectives"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "3.2",
+    "requirement": "统一enum、raw layer0归一化、保留层不泄漏",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyLayersTest.MergedRawLayerZeroUsesPhysicalEdgesAndAcceptsIp",
+      "TopologyLayersTest.LayerTwoAndDefaultNeverLeakIntoPublicInventory",
+      "TopologyQpContract"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "3.3",
+    "requirement": "端口/fabric/plane边界、多端口/多EID归并",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "TopologyLayersTest.AggregatedAndSeparatePortDescriptionsYieldSameLayer",
+      "TopologyLayersTest.ClosRejectsMissingPeerPlaneAndAcceptsOneValidLaterPair"
+    ],
+    "limitation": "物理输入模拟验证，不证明真实左右IO DIE连通或完整Topo工具交付。"
+  },
+  {
+    "section": "3.4",
+    "requirement": "RoCE同域、多PE、IP族/plane/网络实例负例",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "TopologyLayersTest.RoceFullFabricAllPairsWithRepeatedPhysicalIdsRemainDomainScoped",
+      "TopologyLayersTest.RoceRejectsDifferentNonemptyPlanesEmptyUnknownDomainsAndEid"
+    ],
+    "limitation": "验证描述匹配；不证明部署网络全互通或实时链路状态。"
+  },
+  {
+    "section": "4.1",
+    "requirement": "已有能力规则及配置到返回值映射",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyEngineMatrix.Rfc9LiteralSelfAndRemoteExpectations",
+      "TopologyIdentityMatrix.SameServerGroupsAndCrossServerSuperPods"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "4.2-4.3",
+    "requirement": "真实parser/context交换、MTE-only也能建立物理层快照",
+    "status": "UT_PASS",
+    "evidence": [
+      "DiscoveryTest.DiscoversIpOnlyTopologyWithoutCreatingUdmaResources",
+      "TopologyJsonStubTest.ReadsJsonAndQueriesRealPublicApi"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "4.4",
+    "requirement": "共享/自有context入口及UDMA原路由约束",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "run_udma_merge_tests.py",
+      "UdmaRouteTest.MeshRejectsPeerFromAnotherServer",
+      "UdmaRouteTest.UbxClosRejectsPeerFromAnotherNetworkInstance"
+    ],
+    "limitation": "执行提取的OpenDevice/PrepareOpenDevice与真实builder/router；硬件endpoint和完整对象布局仍为桩。"
+  },
+  {
+    "section": "4.5",
+    "requirement": "八种层集合、所有边、双向端口、同层去重、独立于QP策略",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyLayersTest.AllEightPhysicalLayerSetsWithDuplicatePlanesAndPorts",
+      "TopologyLayersTest.EnumeratesAllEdgesAndBothPlanesWithoutPolicy"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "4.6-4.7",
+    "requirement": "初始化顺序、错误汇合、发布前缓存与查询/释放流程",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "test_rfc_integration.py",
+      "DiscoveryTest.EveryCollectiveFailureStopsFurtherExchanges",
+      "DiscoveryTest.Rfc4RuntimeMappingFailuresAreAgreed",
+      "DiscoveryTest.Rfc4ZeroEidCountAndOversizedPeerBlobStopBeforeBlobExchange"
+    ],
+    "limitation": "初始化调用顺序是源码检查；异常/门禁在提取函数执行。完整设备回滚未运行。"
+  },
+  {
+    "section": "5.1",
+    "requirement": "包含链、Python导出、源码集成及950编译隔离规则",
+    "status": "SOURCE_AUDIT",
+    "evidence": [
+      "RfcIntegrationAudit"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "5.2",
+    "requirement": "v1及更长同族布局兼容、原路由行为回归",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1AllMasksPreserveAllReservedAndExtendedTail",
+      "UdmaRouteTest"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "5.3",
+    "requirement": "公开命名、未定义查询位拒绝、未来查询项不擅自实现",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc1AllInvalidBitsSizesVersionsAndMissingActiveState"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "6.1-6.2",
+    "requirement": "必需UT矩阵与fixture验收",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "host/A2.xml",
+      "host/A3.xml",
+      "host/950.xml",
+      "planner/planner.xml",
+      "fixtures"
+    ],
+    "limitation": "可本机验证部分通过；涉及真实设备、native构建的行仍待环境。"
+  },
+  {
+    "section": "6.3",
+    "requirement": "真实CANN构建、符号/pybind链接、双层通信及性能",
+    "status": "NOT_RUN",
+    "evidence": [],
+    "limitation": ""
+  },
+  {
+    "section": "7",
+    "requirement": "工作量估算为规划信息，不是软件可执行要求",
+    "status": "NOT_APPLICABLE",
+    "evidence": [],
+    "limitation": ""
+  },
+  {
+    "section": "8",
+    "requirement": "开发基线与验收来源追溯",
+    "status": "EVIDENCE",
+    "evidence": [
+      "manifest.json",
+      "summary.json"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "9.1-9.2",
+    "requirement": "D/U/self/自动补MTE/950 CMO规则/非950拒绝UDMA",
+    "status": "UT_PASS",
+    "evidence": [
+      "TopologyEngineMatrix.Rfc9LiteralSelfAndRemoteExpectations",
+      "TopologyEngineMatrix.Rfc9ExtensionFailuresAreNotSuccessfulInitializedQueries",
+      "TopologyEngineMatrix.ConfigurationReachabilityRouteSelfAndQueryMasks"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "9.3",
+    "requirement": "平台×query_mask与ABI/错误返回矩阵",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest",
+      "TopologyQueryTest"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "9.4",
+    "requirement": "真实域身份/导入、IO DIE与硬件QP、XSCALE/HNS_1825、quiet",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "TopologyIdentityMatrix",
+      "TopologyLayersTest",
+      "run_udma_merge_tests.py"
+    ],
+    "limitation": "身份字段和硬件资源是桩；不是实际内存导入及RDMA后端验收。"
+  },
+  {
+    "section": "9.5",
+    "requirement": "打印、配置与本机回归",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "fixtures",
+      "legacy-cpp.log",
+      "python-json.log"
+    ],
+    "limitation": "C++ fixture日志打印已运行；完整设备示例二进制未运行。"
+  },
+  {
+    "section": "10.1",
+    "requirement": "远端零能力、排除self、远端失败/collective失败汇合",
+    "status": "UT_PASS",
+    "evidence": [
+      "RfcContractTest.Rfc10GateChecksEveryRemoteAndExcludesActualSelf",
+      "TopologyQueryTest.RejectsZeroRemoteCapabilityAndAgreesRemoteFailures"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "10.2",
+    "requirement": "本机入口可复现、源码和输入指纹",
+    "status": "EVIDENCE",
+    "evidence": [
+      "run_rfc_ut.py",
+      "manifest.json",
+      "receipts.json"
+    ],
+    "limitation": ""
+  },
+  {
+    "section": "10.3",
+    "requirement": "完整设备初始化回滚、硬件CMO/quiet/真实建链",
+    "status": "NOT_RUN",
+    "evidence": [],
+    "limitation": ""
+  },
+  {
+    "section": "11",
+    "requirement": "九份原始TopoInfo、模拟RootInfo与完整PE矩阵",
+    "status": "UT_PARTIAL",
+    "evidence": [
+      "fixtures",
+      "../merged-1019-all/README.md"
+    ],
+    "limitation": "本轮九份输入执行所有源PE0/末源PE的四种基础配置与失败样本，并执行biaoka/UBX全302例；此前完整PE矩阵为历史结果，未冒充本轮重跑。"
+  }
+]

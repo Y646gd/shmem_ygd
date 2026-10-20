@@ -22,6 +22,9 @@
 #include "acl/acl.h"
 #include "shmem.h"
 #include "utils.h"
+#ifdef ACLSHMEM_TOPOLOGY_DEMO
+#include "../topology_query/topology_plan.h"
+#endif
 
 /*
  * 本样例验证直连 UDMA 多 QP 的最小数据通路。
@@ -374,6 +377,9 @@ int main(int argc, char** argv)
 {
     // 阶段 1：解析并校验测试参数，本阶段不访问设备或参与跨 PE 集合通信。
     Options options;
+#ifdef ACLSHMEM_TOPOLOGY_DEMO
+    options.qp_net_layers = {{0, 0}, {1, 1}};
+#endif
     if (!ParseOptions(argc, argv, options)) {
         PrintUsage(argv[0]);
         return 1;
@@ -476,6 +482,15 @@ int main(int argc, char** argv)
     }
     resources.shmem_initialized = true;
     const int next_pe = (options.pe + static_cast<int>(options.peer_stride)) % options.pes;
+#ifdef ACLSHMEM_TOPOLOGY_DEMO
+    status = VerifyTwoLayerPlan(next_pe);
+    if (status != ACLSHMEM_SUCCESS || options.qp_count != 2) {
+        std::cerr << "Two-layer demo needs two established UDMA QPs on layers 0 and 1, status=" << status << '\n';
+        // Stop every member before any peer launches its data transfer.
+        aclshmem_global_exit(status != 0 ? status : ACLSHMEM_INVALID_VALUE);
+        return CleanupResources(resources, 1);
+    }
+#endif
     const std::vector<QpSlice> qp_slices = BuildQpSlices(options.elements, options.qp_count);
     for (uint32_t qp_idx = 0; qp_idx < options.qp_count; ++qp_idx) {
         aclshmemx_net_layer_t net_layer = ACLSHMEM_NET_LAYER_0;

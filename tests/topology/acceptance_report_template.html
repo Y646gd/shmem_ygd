@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>九份上传拓扑 · 950接口验收</title>
+<style>body{font:16px system-ui;background:#f3f6fa;color:#193348;margin:0}main{max-width:1100px;margin:auto;padding:24px}aside{padding:16px;background:#fff0cf;border-radius:12px;line-height:1.8}select{padding:8px;margin:12px}table{width:100%;border-collapse:collapse;background:white}th,td{padding:10px;border-bottom:1px solid #e0e6ec;text-align:left}th{background:#dae7ef}.engine{background:#e4f6ef;font-weight:bold;color:#13664b}a{color:#175cc0}code{overflow-wrap:anywhere}#meta{margin:16px 0;line-height:1.8}</style>
+<main><h1>九份上传拓扑 · 950接口完整返回</h1><p>只使用 tests/topology/topo 中的九份文件。原输入 SHA256 与完整验收见下方链接。</p>
+<aside>这是本机 C++ 打桩结果，所有 RootInfo 的地址、plane、网络实例均为模拟。此基础组合视图固定 <b>D=1，非 self QP0 路由显式给定</b>，不代表从物理 JSON 测出了真实硬件引擎。引擎经过生产能力函数，950 不返回 SDMA D2D 位。<br>表格压缩展示已核验的三个 query_mask 返回；完整边界、失败和实际选路观察在 Excel 和 CSV。设备验收 NOT_RUN。</aside>
+<label>拓扑<select id="topology"></select></label><label>源 PE<select id="source"></select></label>
+<label>初始化配置<select id="config"><option value="1">0x1 MTE</option><option value="5">0x5 MTE+ROCE</option><option value="9">0x9 MTE+UDMA</option><option value="13">0xd MTE+UDMA+ROCE</option></select></label>
+<label>query_mask<select id="mask"><option value="1">0x1 ENGINES</option><option value="2">0x2 LINKS</option><option value="3" selected>0x3 合并</option></select></label><div id="meta"></div>
+<table><thead><tr><th>源→目标 PE</th><th>status</th><th>engine_mask</th><th>net_layer_count</th><th>net_layers</th></tr></thead><tbody id="rows"></tbody></table>
+<p><a href="九份拓扑完整本机验收结果.xlsx">完整 Excel</a> · <a href="README.md">验收结果与执行链路</a> · <a href="summary.json">完整矩阵 JSON</a> · <a href="results.csv">完整 CSV</a> · <a href="manifest.json">输入 SHA 与清理记录</a></p>
+<script>
+const data=__DATA__;
+const topo=document.querySelector('#topology'),src=document.querySelector('#source');
+topo.innerHTML=data.map((r,i)=>`<option value="${i}">${r.name}.json (${r.peers} PE)</option>`).join('');
+function draw(){
+ const r=data[+topo.value],s=+src.value,c=document.querySelector('#config').value,m=+document.querySelector('#mask').value;
+ document.querySelector('#meta').innerHTML=`${r.peers} PE，${r.edges} 条物理边；SHA256：<code>${r.sha256}</code><br>物理 LINKS 集合与有向对数：${JSON.stringify(r.layer_sets)}`;
+ document.querySelector('#rows').innerHTML=r.matrix[s].map((v,p)=>{const layers=(m&2)?v:[],engine=(m&1)?r.basic_engine_matrices[c][s][p]:0;return `<tr><td>${s} → ${p}</td><td>0</td><td class="engine">0x${engine.toString(16)}</td><td>${layers.length}</td><td>[${layers.join(',')}]</td></tr>`}).join('');
+}
+function changeTopology(){src.innerHTML=Array.from({length:data[+topo.value].peers},(_,i)=>`<option>${i}</option>`).join('');draw()}
+topo.onchange=changeTopology;src.onchange=draw;document.querySelector('#config').onchange=draw;document.querySelector('#mask').onchange=draw;changeTopology();
+</script></main></html>

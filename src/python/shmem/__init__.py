@@ -374,6 +374,7 @@ __all__ = [
     'aclshmem_ptr',
     'aclshmemx_get_heap_base',
     'aclshmemx_set_qp_num',
+    'aclshmemx_query_topology',
     'my_pe',
     'pe_count',
     'set_conf_store_tls_key',

@@ -81,6 +81,8 @@ source install/set_env.sh
 
 若您需要了解文档和接口中出现的缩写与名词，请参考[术语表](docs/glossary.md)。
 
+初始化后的 PE 引擎与网络层查询见 [拓扑查询 API](docs/api/topology.md)，使用示例见 [topology_query](examples/topology_query/README.md)。
+
 ## 一、项目简介
 
 SHMEM 是面向昇腾平台的多机多卡内存通信库，通过封装 Host 侧与 Device 侧接口，实现跨设备的高效内存访问与数据同步。其核心价值在于：
@@ -278,3 +280,5 @@ Copyright (c) 2025 Huawei Technologies Co., Ltd.
 2. 示例代码仅供学习参考，生产环境使用前需完成充分的功能和性能测试；
 3. CANN 版本升级可能导致接口兼容问题，建议锁定文档指定的 CANN 版本；
 4. 关闭 TLS 加密后，需确保通信网络为可信内网，避免数据泄露风险。
+
+当前 RFC 实现的 Ascend950 真机编译、拓扑查询、UDMA 双层验证及排错步骤见 [950 部署与调试](docs/ascend950_deploy_debug.md)。

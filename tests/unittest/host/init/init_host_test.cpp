@@ -886,6 +886,7 @@ TEST(TestInitAPI, TestSetQpNetLayerAndGetQpNumBeforeInit)
     EXPECT_EQ(aclshmemx_set_qp_net_layer(ACLSHMEM_DATA_OP_UDMA, 2, ACLSHMEM_NET_LAYER_DEFAULT), ACLSHMEM_SUCCESS);
     EXPECT_EQ(aclshmemx_set_qp_num(ACLSHMEM_DATA_OP_UDMA, 2), ACLSHMEM_SUCCESS);
     EXPECT_EQ(aclshmemx_set_qp_net_layer(ACLSHMEM_DATA_OP_UDMA, 1, ACLSHMEM_NET_LAYER_2), ACLSHMEM_NOT_SUPPORTED);
+    EXPECT_EQ(aclshmemx_set_qp_net_layer(ACLSHMEM_DATA_OP_UDMA, 1, ACLSHMEM_NET_LAYER_3), ACLSHMEM_NOT_SUPPORTED);
     EXPECT_EQ(
         aclshmemx_set_qp_net_layer(
             ACLSHMEM_DATA_OP_UDMA, 1, static_cast<aclshmemx_net_layer_t>(ACLSHMEM_NET_LAYER_3 + 1U)),

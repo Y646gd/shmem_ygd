@@ -1,0 +1,9738 @@
+{
+  "version": "2.0",
+  "hardwareType": "Atlas 950 SuperPoD",
+  "peer_count": 64,
+  "peer_list": [
+    {
+      "local_id": 0
+    },
+    {
+      "local_id": 1
+    },
+    {
+      "local_id": 2
+    },
+    {
+      "local_id": 3
+    },
+    {
+      "local_id": 4
+    },
+    {
+      "local_id": 5
+    },
+    {
+      "local_id": 6
+    },
+    {
+      "local_id": 7
+    },
+    {
+      "local_id": 8
+    },
+    {
+      "local_id": 9
+    },
+    {
+      "local_id": 10
+    },
+    {
+      "local_id": 11
+    },
+    {
+      "local_id": 12
+    },
+    {
+      "local_id": 13
+    },
+    {
+      "local_id": 14
+    },
+    {
+      "local_id": 15
+    },
+    {
+      "local_id": 16
+    },
+    {
+      "local_id": 17
+    },
+    {
+      "local_id": 18
+    },
+    {
+      "local_id": 19
+    },
+    {
+      "local_id": 20
+    },
+    {
+      "local_id": 21
+    },
+    {
+      "local_id": 22
+    },
+    {
+      "local_id": 23
+    },
+    {
+      "local_id": 24
+    },
+    {
+      "local_id": 25
+    },
+    {
+      "local_id": 26
+    },
+    {
+      "local_id": 27
+    },
+    {
+      "local_id": 28
+    },
+    {
+      "local_id": 29
+    },
+    {
+      "local_id": 30
+    },
+    {
+      "local_id": 31
+    },
+    {
+      "local_id": 32
+    },
+    {
+      "local_id": 33
+    },
+    {
+      "local_id": 34
+    },
+    {
+      "local_id": 35
+    },
+    {
+      "local_id": 36
+    },
+    {
+      "local_id": 37
+    },
+    {
+      "local_id": 38
+    },
+    {
+      "local_id": 39
+    },
+    {
+      "local_id": 40
+    },
+    {
+      "local_id": 41
+    },
+    {
+      "local_id": 42
+    },
+    {
+      "local_id": 43
+    },
+    {
+      "local_id": 44
+    },
+    {
+      "local_id": 45
+    },
+    {
+      "local_id": 46
+    },
+    {
+      "local_id": 47
+    },
+    {
+      "local_id": 48
+    },
+    {
+      "local_id": 49
+    },
+    {
+      "local_id": 50
+    },
+    {
+      "local_id": 51
+    },
+    {
+      "local_id": 52
+    },
+    {
+      "local_id": 53
+    },
+    {
+      "local_id": 54
+    },
+    {
+      "local_id": 55
+    },
+    {
+      "local_id": 56
+    },
+    {
+      "local_id": 57
+    },
+    {
+      "local_id": 58
+    },
+    {
+      "local_id": 59
+    },
+    {
+      "local_id": 60
+    },
+    {
+      "local_id": 61
+    },
+    {
+      "local_id": 62
+    },
+    {
+      "local_id": 63
+    }
+  ],
+  "edge_count": 480,
+  "edge_list": [
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 1,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 2,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 3,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 4,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 5,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 2,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 3,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 4,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 5,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 3,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 4,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 5,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 4,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 5,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 5,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 6,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 6,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 7,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 9,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 10,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 11,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 12,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 13,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 10,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 11,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 12,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 13,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 11,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 12,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 13,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 12,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 13,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 13,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 14,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 1,
+      "topo_attr": "",
+      "local_a": 14,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 15,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 17,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 18,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 19,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 20,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 21,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 18,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 19,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 20,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 21,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 19,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 20,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 21,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 20,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 21,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 21,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 22,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 2,
+      "topo_attr": "",
+      "local_a": 22,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 23,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 25,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 26,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 27,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 28,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 29,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 26,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 27,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 28,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 29,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 27,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 28,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 29,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 28,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 29,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 29,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 30,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 3,
+      "topo_attr": "",
+      "local_a": 30,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 31,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 33,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 34,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 35,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 36,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 37,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 34,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 35,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 36,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 37,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 35,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 36,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 37,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 36,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 37,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 37,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 38,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 4,
+      "topo_attr": "",
+      "local_a": 38,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 39,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 41,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 42,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 43,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 44,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 45,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 42,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 43,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 44,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 45,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 43,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 44,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 45,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 44,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 45,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 45,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 46,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 5,
+      "topo_attr": "",
+      "local_a": 46,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 47,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 49,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 50,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 51,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 52,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 53,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 50,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 51,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 52,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 53,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 51,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 52,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 53,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 52,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 53,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 53,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 54,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 6,
+      "topo_attr": "",
+      "local_a": 54,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 55,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 57,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 58,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 59,
+      "local_b_ports": [
+        "0/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 60,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 61,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/7"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/0"
+      ],
+      "local_b": 58,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/8"
+      ],
+      "local_b": 59,
+      "local_b_ports": [
+        "0/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 60,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 61,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/7"
+      ],
+      "local_b": 59,
+      "local_b_ports": [
+        "0/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 60,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 61,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/0"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/3"
+      ],
+      "local_b": 60,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/6"
+      ],
+      "local_b": 61,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/5"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/4"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/3"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 61,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "1/4"
+      ],
+      "local_b": 62,
+      "local_b_ports": [
+        "1/4"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "1/8"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/8"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2PEER",
+      "topo_type": "1DMESH",
+      "topo_instance_id": 7,
+      "topo_attr": "",
+      "local_a": 62,
+      "local_a_ports": [
+        "1/6"
+      ],
+      "local_b": 63,
+      "local_b_ports": [
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 6,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 7,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 14,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 15,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 22,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 23,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 30,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 31,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 38,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 39,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 46,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 47,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 54,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 55,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 62,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 0,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 8,
+      "topo_attr": "",
+      "local_a": 63,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 6,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 7,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 14,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 15,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 22,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 23,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 30,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 31,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 38,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 39,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 46,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 47,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 54,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 55,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/0",
+        "1/1",
+        "1/2",
+        "1/3",
+        "1/5",
+        "1/6"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 62,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 1,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 63,
+      "local_a_ports": [
+        "1/1",
+        "1/2",
+        "0/0",
+        "0/1",
+        "0/2",
+        "0/3",
+        "0/4",
+        "0/5"
+      ],
+      "protocols": [
+        "UB_CTP",
+        "UB_MEM"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 6,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 7,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 14,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 15,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 22,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 23,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 30,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 31,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 38,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 39,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 46,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 47,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 54,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 55,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 62,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 2,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 63,
+      "local_a_ports": [
+        "0/1",
+        "0/2",
+        "1/1",
+        "1/2"
+      ],
+      "protocols": [
+        "UB_TP"
+      ],
+      "position": "DEVICE"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 0,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 1,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 2,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 3,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 4,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 5,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 6,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 7,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 8,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 9,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 10,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 11,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 12,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 13,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 14,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 15,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 16,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 17,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 18,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 19,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 20,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 21,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 22,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 23,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 24,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 25,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 26,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 27,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 28,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 29,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 30,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 31,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 32,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 33,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 34,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 35,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 36,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 37,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 38,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 39,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 40,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 41,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 42,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 43,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 44,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 45,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 46,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 47,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 48,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 49,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 50,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 51,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 52,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 53,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 54,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 55,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 56,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 57,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 58,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 59,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 60,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 61,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 62,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    },
+    {
+      "net_layer": 3,
+      "link_type": "PEER2NET",
+      "topo_type": "CLOS",
+      "topo_instance_id": 0,
+      "topo_attr": "",
+      "local_a": 63,
+      "local_a_ports": [
+        "d2h"
+      ],
+      "protocols": [
+        "ROCE"
+      ],
+      "position": "HOST"
+    }
+  ]
+}

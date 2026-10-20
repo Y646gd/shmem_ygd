@@ -508,6 +508,30 @@ Arguments:
     )");
 
     m.def(
+        "aclshmemx_query_topology",
+        [](int pe, uint32_t query_mask) -> py::tuple {
+            // Keep the GIL through the borrowed-array copy. High-level callers also
+            // use _instance_lock to serialize with finalize (which releases the GIL).
+            aclshmemx_topology_t topology = ACLSHMEMX_TOPOLOGY_INITIALIZER;
+            const int status = aclshmemx_query_topology(pe, query_mask, &topology);
+            if (status != ACLSHMEM_SUCCESS) {
+                return py::make_tuple(status, py::none());
+            }
+            py::dict payload;
+            if ((query_mask & ACLSHMEMX_TOPOLOGY_QUERY_ENGINES) != 0) {
+                payload["engine_mask"] = topology.engine_mask;
+            }
+            if ((query_mask & ACLSHMEMX_TOPOLOGY_QUERY_LINKS) != 0) {
+                py::list layers;
+                for (uint32_t i = 0; i < topology.net_layer_count; ++i) {
+                    layers.append(static_cast<uint32_t>(topology.net_layers[i]));
+                }
+                payload["net_layers"] = std::move(layers);
+            }
+            return py::make_tuple(status, payload);
+        }, py::arg("pe"), py::arg("query_mask"));
+
+    m.def(
         "aclshmemx_set_qp_num", &aclshmemx_set_qp_num, py::call_guard<py::gil_scoped_release>(), py::arg("engine"),
         py::arg("qp_num"), R"(
 Configure the number of QPs created for a data operation engine.

@@ -8,6 +8,7 @@
  * See LICENSE in the root of the software repository for the full text of the License.
  */
 #include <cstdint>
+#include <cstddef>
 #include <cstdlib>
 #include <cstring>
 #include <new>
@@ -1223,6 +1224,7 @@ static int32_t aclshmemi_init_attr_impl(
             if (heap_reserved) {
                 (void)init_manager->remove_heap();
             }
+            (void)init_manager->release_heap(HOST_SIDE);
             (void)init_manager->release_heap();
             if (device_state_initialized) {
                 (void)init_manager->finalize_device_state();
@@ -1324,6 +1326,7 @@ static int32_t aclshmemi_init_attr_impl(
     }
     heap_reserved = true;
     ACLSHMEM_CHECK_RET(init_manager->setup_heap());
+    ACLSHMEM_CHECK_RET(init_manager->validate_peer_reachability(g_instance_ctx->id));
 
     // shmem submodules init
     auto* allocator_base = static_cast<uint8_t*>(g_state.heap_base) + external_bytes;
@@ -1339,6 +1342,7 @@ static int32_t aclshmemi_init_attr_impl(
     ACLSHMEM_CHECK_RET(aclshmemi_signal_init());
     ACLSHMEM_CHECK_RET(aclshmemi_team_init(g_state.mype, g_state.npes, aiv_count));
     ACLSHMEM_CHECK_RET(aclshmemi_sync_init());
+    ACLSHMEM_CHECK_RET(init_manager->build_topology_state(g_instance_ctx->id));
     g_state.is_aclshmem_initialized = true;
     auto current_context = aclshmem_resource_domain.find(g_instance_ctx->id);
     ACLSHMEM_CHECK_RET(
@@ -1360,6 +1364,38 @@ static int32_t aclshmemi_init_attr_impl(
     init_abort_guard.release();
     ctx_guard.release();
     return ACLSHMEM_SUCCESS;
+}
+
+namespace {
+constexpr uint32_t TOPOLOGY_V1_SIZE = 64U;
+static_assert(sizeof(void*) == 8 && alignof(aclshmemx_topology_t) == 8);
+static_assert(sizeof(aclshmemx_topology_t) == TOPOLOGY_V1_SIZE);
+static_assert(offsetof(aclshmemx_topology_t, struct_size) == 0);
+static_assert(offsetof(aclshmemx_topology_t, abi_version) == 4);
+static_assert(offsetof(aclshmemx_topology_t, engine_mask) == 8);
+static_assert(offsetof(aclshmemx_topology_t, net_layer_count) == 12);
+static_assert(offsetof(aclshmemx_topology_t, net_layers) == 16);
+static_assert(offsetof(aclshmemx_topology_t, reserved) == 24);
+} // namespace
+
+int aclshmemx_query_topology(int pe, uint32_t query_mask, aclshmemx_topology_t* topology)
+{
+    if (topology == nullptr) {
+        return ACLSHMEM_INVALID_PARAM;
+    }
+    constexpr uint32_t defined_mask = ACLSHMEMX_TOPOLOGY_QUERY_ENGINES | ACLSHMEMX_TOPOLOGY_QUERY_LINKS;
+    if (query_mask == 0 || (query_mask & ~defined_mask) != 0 ||
+        topology->struct_size < TOPOLOGY_V1_SIZE || topology->abi_version != ACLSHMEMX_TOPOLOGY_ABI_VERSION) {
+        return ACLSHMEM_INVALID_VALUE;
+    }
+    std::lock_guard<std::mutex> lock(g_aclshmem_ctx_mutex);
+    if (init_manager == nullptr || g_instance_ctx == nullptr || !g_state.is_aclshmem_initialized) {
+        return ACLSHMEM_NOT_INITED;
+    }
+    if (pe < 0 || pe >= g_state.npes) {
+        return ACLSHMEM_INVALID_VALUE;
+    }
+    return init_manager->query_topology(g_instance_ctx->id, pe, query_mask, topology);
 }
 
 int32_t aclshmemx_init_attr(aclshmemx_bootstrap_t bootstrap_flags, aclshmemx_init_attr_t* attributes)

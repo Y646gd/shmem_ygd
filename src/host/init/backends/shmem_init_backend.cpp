@@ -25,6 +25,12 @@
 #include "sotre_net.h"
 #include "store_net_common.h"
 #include "mem_entity_def.h"
+#ifdef ACLSHMEM_SOC_950
+#include "transport/topo/topo_reader.h"
+#endif
+
+entity_member::entity_member() = default;
+entity_member::~entity_member() = default;
 
 namespace {
 int setup_trusted_pids(entity_member* entity, int32_t npes, aclshmemi_bootstrap_handle_t* handle)
@@ -155,6 +161,134 @@ int aclshmemi_init_backend::get_qp_net_layer(
     return hybm_get_qp_net_layer(it->second->hbm_entity, engine, peer, qp_idx, net_layer);
 }
 
+int aclshmemi_init_backend::validate_peer_reachability(uint64_t instance_id)
+{
+    std::lock_guard<std::mutex> lock(entity_map_mutex_);
+    const auto it = entity_map_.find(instance_id);
+    if (it == entity_map_.end() || it->second == nullptr || it->second->entity_host_state == nullptr) {
+        return ACLSHMEM_NOT_INITED;
+    }
+    const auto* elem = it->second;
+    const auto& host = *elem->entity_host_state;
+    auto* boot = elem->entity_boot_handle;
+    if (host.npes <= 0 || host.npes > ACLSHMEM_MAX_PES || host.mype < 0 || host.mype >= host.npes ||
+        boot == nullptr || boot->allgather == nullptr) {
+        return ACLSHMEM_INVALID_PARAM;
+    }
+    int local_status = ACLSHMEM_SUCCESS;
+    for (int pe = 0; pe < host.npes; ++pe) {
+        if (pe != host.mype && host.topo_list[pe] == 0) {
+            local_status = ACLSHMEM_NOT_SUPPORTED;
+            break;
+        }
+    }
+    // A peer must not continue to later init collectives when another PE has
+    // no remote engine. Fixed storage also keeps failure handling allocation-free.
+    int statuses[ACLSHMEM_MAX_PES]{};
+    if (boot->allgather(&local_status, statuses, sizeof(local_status), boot) != 0) {
+        return ACLSHMEM_BOOTSTRAP_ERROR;
+    }
+    for (int pe = 0; pe < host.npes; ++pe) {
+        if (statuses[pe] != ACLSHMEM_SUCCESS) return statuses[pe];
+    }
+    return ACLSHMEM_SUCCESS;
+}
+
+int aclshmemi_init_backend::query_topology(
+    uint64_t instance_id, int pe, uint32_t query_mask, aclshmemx_topology_t* out)
+{
+    std::lock_guard<std::mutex> lock(entity_map_mutex_);
+    const auto it = entity_map_.find(instance_id);
+    if (it == entity_map_.end() || it->second == nullptr) {
+        return ACLSHMEM_NOT_INITED;
+    }
+    const auto* elem = it->second;
+#ifndef ACLSHMEM_SOC_950
+    if ((query_mask & ACLSHMEMX_TOPOLOGY_QUERY_LINKS) != 0) {
+        return ACLSHMEM_NOT_SUPPORTED;
+    }
+#endif
+    uint32_t engine_mask = 0;
+    if ((query_mask & ACLSHMEMX_TOPOLOGY_QUERY_ENGINES) != 0) {
+        const auto transport = elem->entity_host_state->topo_list[pe];
+        // Internal ROCE/SDMA positions differ from the public data-op bits.
+        if (transport & ACLSHMEM_TRANSPORT_MTE) engine_mask |= ACLSHMEM_DATA_OP_MTE;
+        if (transport & ACLSHMEM_TRANSPORT_SDMA) engine_mask |= ACLSHMEM_DATA_OP_SDMA;
+        if (transport & ACLSHMEM_TRANSPORT_ROCE) engine_mask |= ACLSHMEM_DATA_OP_ROCE;
+        if (transport & ACLSHMEM_TRANSPORT_UDMA) engine_mask |= ACLSHMEM_DATA_OP_UDMA;
+    }
+    out->engine_mask = engine_mask;
+    out->net_layer_count = 0;
+    out->net_layers = nullptr;
+#ifdef ACLSHMEM_SOC_950
+    if ((query_mask & ACLSHMEMX_TOPOLOGY_QUERY_LINKS) != 0) {
+        const auto& layers = elem->topology_net_layers_by_pe[pe];
+        out->net_layer_count = static_cast<uint32_t>(layers.size());
+        out->net_layers = layers.empty() ? nullptr : layers.data();
+    }
+#endif
+    return ACLSHMEM_SUCCESS;
+}
+
+#if defined(ACLSHMEM_UNIT_TEST) && defined(ACLSHMEM_SOC_950)
+// TEMP_TOPOLOGY_JSON_STUB: no runtime/device discovery or transport creation.
+int aclshmemi_init_backend::install_topology_context_for_test(
+    uint64_t instance_id, std::unique_ptr<shm::transport::TopologyContext> context)
+{
+    std::lock_guard<std::mutex> lock(entity_map_mutex_);
+    const auto it = entity_map_.find(instance_id);
+    if (it == entity_map_.end() || it->second == nullptr) return ACLSHMEM_NOT_INITED;
+    const auto* host = it->second->entity_host_state;
+    if (context == nullptr || host == nullptr || context->my_pe != static_cast<uint32_t>(host->mype) ||
+        context->rank_to_local_id.size() != static_cast<size_t>(host->npes) ||
+        context->rank_to_sync_endpoints.size() != static_cast<size_t>(host->npes)) {
+        return ACLSHMEM_INVALID_VALUE;
+    }
+    it->second->topology_context = std::move(context);
+    return ACLSHMEM_SUCCESS;
+}
+#endif
+
+int aclshmemi_init_backend::build_topology_state(uint64_t instance_id)
+{
+#ifdef ACLSHMEM_SOC_950
+    std::lock_guard<std::mutex> lock(entity_map_mutex_);
+    const auto it = entity_map_.find(instance_id);
+    if (it == entity_map_.end() || it->second == nullptr) {
+        return ACLSHMEM_NOT_INITED;
+    }
+    auto* elem = it->second;
+    const auto& host = *elem->entity_host_state;
+    int status = ACLSHMEM_SUCCESS;
+    try {
+        if (elem->topology_context == nullptr) {
+            status = ACLSHMEM_NOT_INITED;
+        } else {
+            const auto& context = *elem->topology_context;
+            shm::transport::TopoQuerier querier(context.root_info, context.topo_info, host.mype,
+                context.rank_to_local_id, context.rank_to_sync_endpoints);
+            std::vector<std::vector<aclshmemx_net_layer_t>> layers_by_pe(host.npes);
+            for (int pe = 0; pe < host.npes; ++pe) {
+                std::vector<uint32_t> layers;
+                querier.GetReachableNetLayers(pe, layers);
+                for (const auto layer : layers) {
+                    layers_by_pe[pe].push_back(static_cast<aclshmemx_net_layer_t>(layer));
+                }
+            }
+            elem->topology_net_layers_by_pe = std::move(layers_by_pe);
+        }
+    } catch (const std::bad_alloc&) {
+        status = ACLSHMEM_MALLOC_FAILED;
+    } catch (const std::exception&) {
+        status = ACLSHMEM_INNER_ERROR;
+    }
+    return shm::transport::TopologyContext::Agree(status, host.npes, elem->entity_boot_handle);
+#else
+    (void)instance_id;
+    return ACLSHMEM_SUCCESS;
+#endif
+}
+
 int aclshmemi_init_backend::release_aclshmem_entity(uint64_t instance_id)
 {
     std::lock_guard<std::mutex> lock(entity_map_mutex_);
@@ -247,6 +381,26 @@ int aclshmemi_init_backend::create_entity(aclshmem_mem_type_t mem_type)
         return ACLSHMEM_INNER_ERROR;
     }
 
+#ifdef ACLSHMEM_SOC_950
+    if (mem_type == DEVICE_SIDE) {
+        int status = ACLSHMEM_SUCCESS;
+        try {
+            elem->topology_context = std::make_unique<shm::transport::TopologyContext>();
+        } catch (const std::bad_alloc&) {
+            status = ACLSHMEM_MALLOC_FAILED;
+        }
+        status = shm::transport::TopologyContext::Agree(status, host_state->npes, elem->entity_boot_handle);
+        if (status != ACLSHMEM_SUCCESS) {
+            return status;
+        }
+        status = elem->topology_context->Initialize(
+            device_id, host_state->mype, host_state->npes, elem->entity_boot_handle);
+        if (status != ACLSHMEM_SUCCESS) {
+            return status;
+        }
+    }
+#endif
+
     // 创建entity
     hybm_options options{};
     options.bmType = hybm_type::HYBM_TYPE_AI_CORE_INITIATE;
@@ -267,6 +421,9 @@ int aclshmemi_init_backend::create_entity(aclshmem_mem_type_t mem_type)
     options.rankCount = attributes->n_pes;
     options.rankId = attributes->my_pe;
     shm::transport::TransportOptions transport_options;
+#ifdef ACLSHMEM_SOC_950
+    transport_options.topologyContext = elem->topology_context.get();
+#endif
     transport_options.rankId = attributes->my_pe;
     transport_options.rankCount = attributes->n_pes;
     transport_options.protocol = options.bmDataOpType;
@@ -483,8 +640,12 @@ int aclshmemi_init_backend::reach_info_init(void*& gva)
     auto quiet_state = reinterpret_cast<aclshmemi_device_quiet_state_t*>(
         reinterpret_cast<uint8_t*>(elem->entity_device_state) + sizeof(aclshmem_device_host_state_t));
     quiet_state->quiet_transport_mask = 0;
-    constexpr uint32_t remoteTransportMask =
-        HYBM_DOP_TYPE_MTE | HYBM_DOP_TYPE_DEVICE_RDMA | HYBM_DOP_TYPE_DEVICE_SDMA | HYBM_DOP_TYPE_DEVICE_UDMA;
+#ifdef ACLSHMEM_SOC_950
+    // CMO still needs SDMA completion even though SDMA is not a 950 D2D capability.
+    if ((elem->entity_attr->option_attr.data_op_engine_type & ACLSHMEM_DATA_OP_SDMA) != 0) {
+        quiet_state->quiet_transport_mask |= ACLSHMEM_TRANSPORT_SDMA;
+    }
+#endif
 
     for (int32_t i = 0; i < host_state->npes; i++) {
         hybm_data_op_type reaches_types;
@@ -492,11 +653,6 @@ int aclshmemi_init_backend::reach_info_init(void*& gva)
         if (ret != 0) {
             SHM_LOG_ERROR("hybm_entity_reach_types failed: " << ret);
             return ACLSHMEM_SMEM_ERROR;
-        }
-        if (i != host_state->mype &&
-            (static_cast<uint32_t>(reaches_types) & remoteTransportMask) == HYBM_DOP_TYPE_DEFAULT) {
-            SHM_LOG_ERROR("No reachable transport backend for remote rank " << i);
-            return ACLSHMEM_NOT_SUPPORTED;
         }
         host_state->p2p_device_heap_base[i] = (void*)((uintptr_t)gva + aligned * static_cast<uint32_t>(i));
         SHM_LOG_DEBUG("rank " << i << " p2p_heap_base: " << host_state->p2p_device_heap_base[i]);

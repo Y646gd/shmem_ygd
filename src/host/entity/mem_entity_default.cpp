@@ -930,9 +930,12 @@ hybm_data_op_type MemEntityDefault::CanReachDataOperators(uint32_t remoteRank) c
     if (sdmaReach) {
         supportDataOp |= HYBM_DOP_TYPE_MTE;
     }
+#ifndef ACLSHMEM_SOC_950
+    // 950 SDMA supports CMO only; it is not a PE-to-PE D2D engine.
     if (sdmaReach && ((options_.bmDataOpType & HYBM_DOP_TYPE_DEVICE_SDMA) != 0)) {
         supportDataOp |= HYBM_DOP_TYPE_DEVICE_SDMA;
     }
+#endif
     if ((options_.bmDataOpType & HYBM_DOP_TYPE_DEVICE_RDMA) != 0) {
         supportDataOp |= HYBM_DOP_TYPE_DEVICE_RDMA;
     }

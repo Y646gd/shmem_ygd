@@ -933,6 +933,47 @@ bool EndpointMatchesResolvedFabric(
     return PortMatchesFabric(topoInfo, port, fabric);
 }
 
+// Physical inventory deliberately accepts IP and EID endpoints. UDMA route selection
+// retains its separate EID-only predicate and bandwidth preference.
+bool PhysicalEndpointPairMatches(
+    const TopoInfo& topo, const SyncEndpoint& local, const SyncEndpoint& peer,
+    const std::string& localPort, const std::string& peerPort, TopoFabric fabric, uint32_t rawLayer)
+{
+    auto matches = [&](const SyncEndpoint& endpoint, const std::string& port) {
+        if (!EndpointHasPort(endpoint, port)) return false;
+        if (endpoint.netType == NetType::Mesh) return fabric == TopoFabric::Mesh;
+        if (endpoint.netType == NetType::Clos) return fabric == TopoFabric::Clos;
+        return endpoint.netType == NetType::TopoFileDesc && PortMatchesFabric(topo, port, fabric);
+    };
+    if (!matches(local, localPort) || !matches(peer, peerPort)) return false;
+    if (fabric == TopoFabric::Mesh) {
+        return local.netLayer == rawLayer && peer.netLayer == rawLayer &&
+               IsUsableNetInstanceId(local.netInstanceId) && local.netInstanceId == peer.netInstanceId;
+    }
+    if (local.planeId.empty() || local.planeId != peer.planeId) return false;
+    if (local.netType == NetType::Clos || peer.netType == NetType::Clos) {
+        return local.netLayer == rawLayer && peer.netLayer == rawLayer &&
+               IsUsableNetInstanceId(local.netInstanceId) && local.netInstanceId == peer.netInstanceId;
+    }
+    // The caller has already matched the two attachments' topology instance and layer.
+    return true;
+}
+
+bool HasRoceLayerRelation(const std::vector<SyncEndpoint>& local, const std::vector<SyncEndpoint>& peer)
+{
+    for (const auto& a : local) {
+        for (const auto& b : peer) {
+            if (a.netLayer == 3 && b.netLayer == 3 && a.netType == NetType::Clos && b.netType == NetType::Clos &&
+                IsUsableNetInstanceId(a.netInstanceId) && a.netInstanceId == b.netInstanceId &&
+                !a.planeId.empty() && a.planeId == b.planeId && a.addrType == b.addrType &&
+                (a.addrType == RankAddrType::IPV4 || a.addrType == RankAddrType::IPV6)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 const SyncEndpoint* FindEndpointByPortPlaneAndFabric(
     const TopoInfo& topoInfo, const std::vector<SyncEndpoint>& endpoints, const std::string& port,
     const SyncEndpoint& localEndpoint, TopoFabric fabric, uint32_t netLayer)
@@ -1439,6 +1480,58 @@ bool TopoQuerier::GetEidRoute(
     localEidRaw = routes.front().localEidRaw;
     remoteEidIndex = routes.front().remoteEidIndex;
     return true;
+}
+
+void TopoQuerier::GetReachableNetLayers(uint32_t targetRank, std::vector<uint32_t>& layers) const
+{
+    layers.clear();
+    if (targetRank == myRank_ || myRank_ >= rankToLocalId_.size() || targetRank >= rankToLocalId_.size() ||
+        myRank_ >= rankIdxToSyncEndpoint_.size() || targetRank >= rankIdxToSyncEndpoint_.size()) {
+        return;
+    }
+    const auto localId = rankToLocalId_[myRank_];
+    const auto peerId = rankToLocalId_[targetRank];
+    const auto& local = rankIdxToSyncEndpoint_[myRank_];
+    const auto& peer = rankIdxToSyncEndpoint_[targetRank];
+    auto hasPair = [&](const std::vector<EidPort>& localPorts, const std::vector<EidPort>& peerPorts,
+                       TopoFabric fabric, uint32_t layer) {
+        for (const auto& lp : localPorts) {
+            for (const auto& pp : peerPorts) {
+                for (const auto& a : local) {
+                    for (const auto& b : peer) {
+                        if (PhysicalEndpointPairMatches(topoInfo_, a, b, lp, pp, fabric, layer)) return true;
+                    }
+                }
+            }
+        }
+        return false;
+    };
+    auto append = [&](TopoFabric fabric, uint32_t rawLayer) {
+        const auto layer = EffectiveRouteNetLayer(rootInfo_, topoInfo_, fabric, rawLayer);
+        if (layer == 0 || layer == 1) layers.push_back(layer);
+    };
+    // The existing local-pair index stores only one edge; inventory needs every edge.
+    for (const auto& edge : topoInfo_.meshTopoEdges) {
+        if (edge.localA == localId && edge.localB == peerId &&
+            hasPair(edge.localAPorts, edge.localBPorts, TopoFabric::Mesh, 0)) {
+            append(TopoFabric::Mesh, 0);
+        } else if (edge.localB == localId && edge.localA == peerId &&
+                   hasPair(edge.localBPorts, edge.localAPorts, TopoFabric::Mesh, 0)) {
+            append(TopoFabric::Mesh, 0);
+        }
+    }
+    for (const auto& a : topoInfo_.closTopoEdges) {
+        if (a.localA != localId) continue;
+        for (const auto& b : topoInfo_.closTopoEdges) {
+            if (b.localA == peerId && a.netLayer == b.netLayer && a.topoInstanceId == b.topoInstanceId &&
+                hasPair(a.ports, b.ports, TopoFabric::Clos, a.netLayer)) {
+                append(TopoFabric::Clos, a.netLayer);
+            }
+        }
+    }
+    if (HasRoceLayerRelation(local, peer)) layers.push_back(3);
+    std::sort(layers.begin(), layers.end());
+    layers.erase(std::unique(layers.begin(), layers.end()), layers.end());
 }
 
 } // namespace transport

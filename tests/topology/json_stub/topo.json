@@ -1,0 +1,60 @@
+{
+  "edge_list": [
+    {
+      "local_a": 0,
+      "local_b": 1,
+      "local_a_ports": [
+        "unusable"
+      ],
+      "local_b_ports": [
+        "unusable"
+      ]
+    },
+    {
+      "local_a": 0,
+      "local_b": 1,
+      "local_a_ports": [
+        "m0"
+      ],
+      "local_b_ports": [
+        "m1"
+      ]
+    },
+    {
+      "local_a": 0,
+      "net_layer": 1,
+      "topo_instance_id": 42,
+      "topo_type": "CLOS",
+      "local_a_ports": [
+        "c0"
+      ]
+    },
+    {
+      "local_a": 1,
+      "net_layer": 1,
+      "topo_instance_id": 42,
+      "topo_type": "CLOS",
+      "local_a_ports": [
+        "c1"
+      ]
+    },
+    {
+      "local_a": 2,
+      "net_layer": 1,
+      "topo_instance_id": 42,
+      "topo_type": "CLOS",
+      "local_a_ports": [
+        "c2"
+      ]
+    },
+    {
+      "local_a": 3,
+      "net_layer": 1,
+      "topo_instance_id": 42,
+      "topo_type": "CLOS",
+      "local_a_ports": [
+        "c3"
+      ]
+    }
+  ]
+}
